@@ -34,21 +34,19 @@
         this.media.pause();
       };
 
-      const player = new mediaPlayer({ el: video });
+      /*   const player = new mediaPlayer({ el: video });
       button.onclick = () => {
         if (player.media.paused) {
           player.play();
         } else {
           player.pause();
         }
-      };
-
-      /*      const player = new mediaPlayer({ el: video });
-      button.onclick = () => {
-        player.media.paused ? 
-        player.play() : 
-        player.pause();
       }; */
+
+      const player = new mediaPlayer({ el: video });
+      button.onclick = () => {
+        player.media.paused ? player.play() : player.pause();
+      };
     </script>
   </body>
 </html>
