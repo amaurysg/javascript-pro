@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //This global
+      console.log(`This : ${this}`);
+
+      function quienEsThis() {
+        return this;
+      }
+
+      const person = {
+        name: "Amaury",
+        saludar: function () {
+          console.log(`Hola ${this.name}`);
+        },
+      };
+
+      person.saludar();
+      //This cuando sacanos a una funcion de una funcion de un objeto
+      const accion = person.saludar;
+      accion();
+      //Hola (Undifined)
+
+      //This en el contexto de una clase
+      function Person(name) {
+        this.name = name;
+      }
+
+      Person.prototype.saludar = function () {
+        console.log(`Hola mi nombre es ${this.name}`);
+      };
+
+      const angela = new Person("Angela");
+      angela.saludar();
+
+      console.log(`quienEsThis(): ${quienEsThis()}`);
+    </script>
+  </body>
+</html>

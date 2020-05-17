@@ -36,3 +36,10 @@ main {
 .movie {
   width: 100%;
 }
+
+.button--play {
+  border-radius: 10px;
+  outline: none;
+
+  padding: 5px;
+}
