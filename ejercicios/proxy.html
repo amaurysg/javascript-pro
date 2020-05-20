@@ -20,7 +20,6 @@
       // Para eso eso vamos a usar un algoritmo que se llama Levenshtein. (window.Levenshtein.get)
       // Ejemplos de levenshtein distance (usa window.Levenshtein)
 
-      const p = new proxy(target, handler);
       const target = {
         red: "Rojo",
         blue: "Azul",
@@ -44,6 +43,7 @@
           return obj[prop];
         },
       };
+      const p = new proxy(target, handler);
     </script>
   </body>
 </html>
