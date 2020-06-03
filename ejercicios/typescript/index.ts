@@ -64,3 +64,9 @@ function createAdder(a: number): (number) => number {
 
 const addf = createAdder(4);
 const fourPlus6 = addf(6);
+
+function fullName(firstName: string, lastName?:string){
+  return `${firstName} ${lastName}`
+}
+const amauryFull = fullName("Amaury", "Soto");
+const amaury = fullName("Amaury",)
